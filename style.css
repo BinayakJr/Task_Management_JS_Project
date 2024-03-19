@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Container css */
+.container {
+    max-width: 90%;
+    margin: 50px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#taskForm {
+    flex-basis: 25%;
+}
+
+#taskTable {
+    flex-basis: 73%;
+}
+
+#taskForm h2{
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+label{
+    font-weight: bold;
+}
+
+input, select, textarea {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit {
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit:hover {
+    background-color: #0056b3;
+}
+
+.tasksCount {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.tasksCount span {
+    font-weight: bold;
+}
+
+.task {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.task:last-child {
+    border-bottom: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+
+table th,
+table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.btn {
+    padding: 10px 15px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+.btn-danger {
+    background-color: #DC143C;
+}
+
+.btn-danger:hover {
+    background-color: #8B0000;
+}
+
+.btn-primary {
+    background-color:  #228B22;
+}
+
+.btn-primary:hover {
+    background-color:  #006400;
+}
+
+.btn-success {
+    background-color: #fff;
+    color: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    border-color: ;
+}
+
+/* media queries for responsive design */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #taskForm,
+    #taskTable {
+        flex-basis: 100%;
+    }
+
+    #taskForm h2 {
+        font-size: 20px;
+    }
+
+    input,
+    select,
+    textarea {
+        width: calc(100% - 20px); 
+    }
+
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    table th,
+    table td {
+        display: block;
+        padding: 8px;
+        text-align: center;
+    }
+
+    table th {
+        text-align: left; 
+    }
+
+}
+
