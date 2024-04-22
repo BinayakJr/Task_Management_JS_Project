@@ -143,19 +143,14 @@ function searchTasks() {
 
 }
 
-// Function to calculate and update total tasks and completed tasks
+// Function to calculate completed tasks
 function updateTaskCounts() {
-    const totalTasksElement = document.getElementById('totalTasks')
     const completedTasksElement = document.getElementById('completedTasks')
-
-    // Calculate total tasks
-    const totalTasksCount = tasks.length
 
     // Calculate completed tasks
     const completedTasksCount = tasks.filter(task => task.completed).length
 
     // Update HTML elements with the calculated counts
-    totalTasksElement.textContent = totalTasksCount
     completedTasksElement.textContent = completedTasksCount
 }
 
